@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
+//libraries
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+//Components
+import Spinner from '../../components/spinner/Spinner';
+import SnackbarToast from '../../components/snackbar/Snackbars';
+//Services
+import getAlkemyToken from '../../services/alkemy/alkemy-token';
+//Assets
+import logo from '../../assets/abstergo-logo.png';
+//Material-ui
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import logo from '../assets/abstergo-logo.png';
-import Spinner from '../components/spinner/Spinner';
 import { makeStyles } from '@material-ui/core/styles';
-import getAlkemyToken from '../services/alkemy/alkemy-token';
-import SnackbarToast from '../components/snackbar/Snackbars';
+
 
 const validationSchema = yup.object({
     email: yup
@@ -20,7 +26,7 @@ const validationSchema = yup.object({
         .required('Password is required'),
 });
 
-const LogInForm = () => {
+const LogInForm = (props) => {
 
     const [showSpinner, setShowSpinner] = useState(false);
     const [auth, setAuth] = useState(null)
@@ -29,13 +35,17 @@ const LogInForm = () => {
 
     async function uponSubmit(arg) {
         let response = await getAlkemyToken(arg);
+        console.log(JSON.stringify(response))
         if (response.data) {
             setAuth(response.data.error);
             setTimeout(() => {
                 setAuth(null)
             }, 3 * 1000);
         } else {
-            console.log(response)
+            console.log(response.token)
+            localStorage.setItem('alkemyToken', JSON.stringify(response.token))
+            //localStorage.removeItem('alkemyToken')
+            props.history.push('/home')
         }
         setShowSpinner(false);
     }
