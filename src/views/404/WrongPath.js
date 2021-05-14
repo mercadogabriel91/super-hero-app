@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../../assets/Into-the-Spider-Verse.jpg'
 
 export default function WrongPath() {
     return (
@@ -9,9 +10,13 @@ export default function WrongPath() {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            backgroundImage: `url(${img})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
         }} >
-            <h1>Error 404</h1>
+            <p style={{fontSize:35, fontWeight:'bolder', color:'white'}}>Error 404</p>
         </div>
     )
 }
