@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 //Material ui
 import { makeStyles } from '@material-ui/core/styles';
 import { AccessAlarm, DeleteForever } from '@material-ui/icons';
 //Local imports
 import LoadingBar from '../../components/LoadingBar/LoadingBar';
+//Services 
+import getHeroById from '../../services/super-hero-api/GetHeroById';
 
 const TeamFormElem = (props) => {
     const { classes } = props;
+    const [list, setList] = useState([])
+
+    useEffect(() => {
+        (async function () {
+            getHeroById();
+        })();
+    }, [])
+
     return (
         <div>
             <div className={classes.teamTitleContainer}>
@@ -17,19 +27,33 @@ const TeamFormElem = (props) => {
                     <div className={classes.heroNameContainer}>
                         {props.alignment === 'good' ? <p className={classes.heroName}>Hero name</p> : <p className={classes.badHeroName}>Hero name</p>}
                     </div>
-                    <div style={{display:'flex', flexDirection:'row', justifyContent:'center',paddingTop:'20vh',}}>
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', paddingTop: '20vh', }}>
                         {/* <AccessAlarm style={{ color: 'white', marginRight:10 }} /> */}
-                        <div style={{border:'1px solid red', borderRadius:50, width:27, height:27, padding:2, alignItems:'center', justifyContent:'center', display:'flex' }}><DeleteForever style={{ color: 'red'}} /></div>
+                        <div style={{ border: '1px solid red', borderRadius: 50, width: 27, height: 27, padding: 2, alignItems: 'center', justifyContent: 'center', display: 'flex' }}>
+                            <DeleteForever style={{ color: 'red' }} />
+                        </div>
                     </div>
                 </div>
                 <div className={classes.heroImage}>
                     <div className={classes.heroNameContainer}>
                         {props.alignment === 'good' ? <p className={classes.heroName}>Hero name</p> : <p className={classes.badHeroName}>Hero name</p>}
                     </div>
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', paddingTop: '20vh', }}>
+                        {/* <AccessAlarm style={{ color: 'white', marginRight:10 }} /> */}
+                        <div style={{ border: '1px solid red', borderRadius: 50, width: 27, height: 27, padding: 2, alignItems: 'center', justifyContent: 'center', display: 'flex' }}>
+                            <DeleteForever style={{ color: 'red' }} />
+                        </div>
+                    </div>
                 </div>
                 <div className={classes.heroImage}>
                     <div className={classes.heroNameContainer}>
                         {props.alignment === 'good' ? <p className={classes.heroName}>Hero name</p> : <p className={classes.badHeroName}>Hero name</p>}
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', paddingTop: '20vh', }}>
+                        {/* <AccessAlarm style={{ color: 'white', marginRight:10 }} /> */}
+                        <div style={{ border: '1px solid red', borderRadius: 50, width: 27, height: 27, padding: 2, alignItems: 'center', justifyContent: 'center', display: 'flex' }}>
+                            <DeleteForever style={{ color: 'red' }} />
+                        </div>
                     </div>
                 </div>
             </div>

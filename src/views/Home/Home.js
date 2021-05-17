@@ -7,7 +7,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import SimpleMenu from '../../components/menu/menu';
 import Teams from '../Teams/Teams';
 
-
 export default function Home(props) {
     const classes = useStyles();
     return (

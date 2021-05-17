@@ -5,7 +5,7 @@ import { Paper, Button } from '@material-ui/core'
 //Local imports
 import SimpleModal from '../modal/Modal';
 
-export default function CarouselSlider(props) {
+export default function CarouselSlider(props) {    
 
     const [open, setOpen] = useState(false);
 

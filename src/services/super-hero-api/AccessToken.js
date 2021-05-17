@@ -1,0 +1,1 @@
+export const AccesToken = '10225770133864422';

@@ -35,14 +35,12 @@ const LogInForm = (props) => {
 
     async function uponSubmit(arg) {
         let response = await getAlkemyToken(arg);
-        console.log(JSON.stringify(response))
         if (response.data) {
             setAuth(response.data.error);
             setTimeout(() => {
                 setAuth(null)
             }, 3 * 1000);
         } else {
-            console.log(response.token)
             localStorage.setItem('alkemyToken', JSON.stringify(response.token))
             //localStorage.removeItem('alkemyToken')
             props.history.push('/home')
