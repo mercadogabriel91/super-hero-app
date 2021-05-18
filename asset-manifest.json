@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/super-hero-app/static/js/main.2f5c46c6.chunk.js",
+    "main.js.map": "/super-hero-app/static/js/main.2f5c46c6.chunk.js.map",
+    "runtime-main.js": "/super-hero-app/static/js/runtime-main.896bb5c0.js",
+    "runtime-main.js.map": "/super-hero-app/static/js/runtime-main.896bb5c0.js.map",
+    "static/css/2.1793352b.chunk.css": "/super-hero-app/static/css/2.1793352b.chunk.css",
+    "static/js/2.167e0f6a.chunk.js": "/super-hero-app/static/js/2.167e0f6a.chunk.js",
+    "static/js/2.167e0f6a.chunk.js.map": "/super-hero-app/static/js/2.167e0f6a.chunk.js.map",
+    "static/js/3.77ccb2c2.chunk.js": "/super-hero-app/static/js/3.77ccb2c2.chunk.js",
+    "static/js/3.77ccb2c2.chunk.js.map": "/super-hero-app/static/js/3.77ccb2c2.chunk.js.map",
+    "index.html": "/super-hero-app/index.html",
+    "static/css/2.1793352b.chunk.css.map": "/super-hero-app/static/css/2.1793352b.chunk.css.map",
+    "static/js/2.167e0f6a.chunk.js.LICENSE.txt": "/super-hero-app/static/js/2.167e0f6a.chunk.js.LICENSE.txt",
+    "static/media/Into-the-Spider-Verse.e0f56480.jpg": "/super-hero-app/static/media/Into-the-Spider-Verse.e0f56480.jpg",
+    "static/media/index.css": "/super-hero-app/static/media/roboto-latin-900italic.cb5ad999.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.896bb5c0.js",
+    "static/css/2.1793352b.chunk.css",
+    "static/js/2.167e0f6a.chunk.js",
+    "static/js/main.2f5c46c6.chunk.js"
+  ]
+}
