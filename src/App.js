@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 //Material ui 
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,13 +15,13 @@ export default function App() {
 
     return (
         <div className={classes.main}>
-            <BrowserRouter>
+            <HashRouter basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route exact path="/" component={LogInForm} />
                     <ProtectedRoute exact path="/home" component={Home} />
                     <Route path="*" component={WrongPath} />
                 </Switch>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     )
 }
