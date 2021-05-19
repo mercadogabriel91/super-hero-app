@@ -14,7 +14,10 @@ const getAlkemyToken = async (arg) => {
     }
 
     let headers = {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*",
+        'Accept': 'application/json',
+        "access-control-allow-origin":"*"
     }
 
     await axios.post(serviceURL, body, { headers }).then(function (response) {
