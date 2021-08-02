@@ -12,6 +12,7 @@ import WrongPath from './views/404/WrongPath';
 
 export default function App() {
     const classes = useStyles();
+    //This is a simple comment to test if it commits
 
     return (
         <div className={classes.main}>
